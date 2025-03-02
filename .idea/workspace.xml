@@ -4,20 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="81d1fd37-3e75-4605-af9f-fd157c2b2570" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/Assignment1.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/env.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/monte_carlo.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/q_learning.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sarsa.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils.py" afterDir="false" />
+    <list default="true" id="81d1fd37-3e75-4605-af9f-fd157c2b2570" name="更改" comment="Frozen Lake Reinforcement Learning Solver">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +54,8 @@
     "Python.python main.py --method monte_carlo --map_size 8 --epsilon 0.15 --gamma 0.9 --episodes 3000 --epsilon_decay 0.97 --epsilon_min 0.02 --use_dynamic_epsilon --map_type custom --custom_holes \"5,10,15,20\" --use_exploration_bonus --exploration_bonus_value -0.02.executor": "Run",
     "Python.test.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master"
+    "git-widget-placeholder": "master",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -233,6 +222,19 @@
       <option name="presentableId" value="Default" />
       <updated>1740629024190</updated>
     </task>
+    <task id="LOCAL-00001" summary="Frozen Lake Reinforcement Learning Solver">
+      <option name="closed" value="true" />
+      <created>1740913726791</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1740913726791</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Frozen Lake Reinforcement Learning Solver" />
+    <option name="LAST_COMMIT_MESSAGE" value="Frozen Lake Reinforcement Learning Solver" />
   </component>
 </project>

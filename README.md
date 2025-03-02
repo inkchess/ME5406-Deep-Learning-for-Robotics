@@ -1,9 +1,11 @@
 
 # Frozen Lake Reinforcement Learning Solver
 
-## II. PROBLEM STATEMENT
+## PROBLEM STATEMENT
 
 Consider a frozen lake with (four) holes covered by patches of very thin ice. Suppose that a robot is to glide on the frozen surface from one location (i.e., the top left corner) to another (bottom right corner) in order to pick up a frisbee there, as is illustrated in Fig. 1.
+    
+![Fig1](task/Fig1.png) 
 
 The operation of the robot has the following characteristics:
 1. At a state, the robot can move in one of four directions: left, right, up, and down.
@@ -11,7 +13,8 @@ The operation of the robot has the following characteristics:
 3. The robot receives a reward of +1 if it reaches the frisbee, -1 if it falls into a hole, and 0 for all other cases.
 4. An episode ends when the robot reaches the frisbee or falls into a hole.
 
-## III. REQUIREMENT
+
+## REQUIREMENT
 
 ### A. What to be done
 
@@ -39,7 +42,7 @@ This project is designed to solve the Frozen Lake problem using three classical 
 - **-1** for falling into a hole.
 - **0** for all other transitions (unless an exploration bonus is used).
 
-The project is modularized into multiple Python files:
+This project contains several Python files:
 - **env.py**: Defines the Frozen Lake environment.
 - **utils.py**: Provides helper functions (epsilon-greedy action selection, Q-table initialization, plotting helpers, policy extraction, etc.).
 - **monte_carlo.py**: Implements the First-Visit Monte Carlo Control algorithm.
@@ -116,7 +119,7 @@ The environment supports two map generation modes:
 
 For the basic implementation. The map is 4×4, and the parameters include a custom set of obstacles.
 
-Example (using custom holes "5,10,15,20", epsilon 0.1, gamma 0.9):
+Example (using custom holes "5,10,15,20", epsilon 0.1, gamma 0.9 as Fig1):
 
 **Method Sarsa**
 ```bash
@@ -158,13 +161,13 @@ In the improved version, the following features are added:
 - `--epsilon`: Initial epsilon value.
 - `--gamma`: Discount factor.
 - `--episodes`: Number of training episodes.
-- `--epsilon_decay`: The decay rate of epsilon per episode.
-- `--epsilon_min`: The minimum epsilon value.
+- `--epsilon_decay`: If provided, the decay rate of epsilon per episode.
+- `--epsilon_min`: If provided, the minimum epsilon value.
 - `--use_dynamic_epsilon`: If provided, epsilon decays over episodes.
 - `--map_type`: Map type; "random" for a random map or "custom" for a user-defined map.
 - `--custom_holes`: A comma-separated list of state numbers to use as obstacles when using a custom map.
 - `--use_exploration_bonus`: If provided, enables an exploration bonus in non-terminal states.
-- `--exploration_bonus_value`: The bonus (typically a small negative value) applied in non-terminal states.
+- `--exploration_bonus_value`: If provided, the bonus (typically a small negative value) applied in non-terminal states.
 
 ### Advanced Command-Line Example:
 ```bash

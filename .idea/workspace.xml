@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="81d1fd37-3e75-4605-af9f-fd157c2b2570" name="更改" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/Assignment1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/env.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/monte_carlo.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/q_learning.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sarsa.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2tbmCwb5REoYysa5gu4d1Kw5cDw" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.Tewst.executor": "Run",
+    "Python.assignment1.executor": "Run",
+    "Python.frozenlake_animate.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.python Tewst.py --method monte_carlo --map_size 10 --epsilon 0.1 --gamma 0.9 --episodes 2000 --epsilon_decay 0.98 --epsilon_min 0.05 --use_dynamic_epsilon --map_type custom --custom_holes \"15,22,35,48\" --use_exploration_bonus.executor": "Run",
+    "Python.python Tewst.py --method monte_carlo --map_size 10 --epsilon 0.1 --gamma 0.9 --episodes 5000.executor": "Run",
+    "Python.python Tewst.py --method monte_carlo --map_size 4 --epsilon 0.1 --gamma 0.9 --episodes 2000 --epsilon_decay 0.98 --epsilon_min 0.05 --use_dynamic_epsilon --map_type custom --custom_holes \"5,7,11,12\" --use_exploration_bonus.executor": "Run",
+    "Python.python Tewst.py --method monte_carlo --map_size 4 --epsilon 0.1 --gamma 0.9 --episodes 2000 --epsilon_decay 0.98 --epsilon_min 0.05 --use_dynamic_epsilon --map_type custom --custom_holes \"5,7，11，12\" --use_exploration_bonus.executor": "Run",
+    "Python.python Tewst.py --method monte_carlo --map_size 4 --epsilon 0.1 --gamma 0.9 --episodes 5000 --epsilon_decay 0.98 --epsilon_min 0.05 --use_dynamic_epsilon --map_type custom --custom_holes \"5,7,11,12\" --use_exploration_bonus.executor": "Run",
+    "Python.python Tewst.py --method monte_carlo --map_size 4 --epsilon 0.1 --gamma 0.9 --episodes 5000 --map_type custom --custom_holes \"5,7,11,12\".executor": "Run",
+    "Python.python Tewst.py --method monte_carlo --map_size 4 --epsilon 0.1 --gamma 0.9 --episodes 5000.executor": "Run",
+    "Python.python Tewst.py --method q_learning --map_size 10 --epsilon 0.1 --gamma 0.9 --episodes 5000.executor": "Run",
+    "Python.python Tewst.py --method q_learning --map_size 4 --epsilon 0.1 --gamma 0.9 --episodes 5000.executor": "Run",
+    "Python.python Tewst.py --method sarsa --map_size 10 --epsilon 0.1 --gamma 0.9 --episodes 5000.executor": "Run",
+    "Python.python Tewst.py --method sarsa --map_size 4 --epsilon 0.1 --gamma 0.9 --episodes 5000.executor": "Run",
+    "Python.python Tewst.py --method sarsa --map_size 6 --epsilon 0.1 --gamma 0.9 --episodes 5000 --epsilon_decay 0.98 --epsilon_min 0.05 --use_dynamic_epsilon --map_type random --use_exploration_bonus --exploration_bonus_value -0.005.executor": "Run",
+    "Python.python Tewst.py --q_learning --map_size 10 --epsilon 0.1 --gamma 0.9 --episodes 5000.executor": "Run",
+    "Python.python frozenlake_animate.py --method q_learning --map_size 4 --epsilon 0.1 --gamma 0.9 --episodes 20 --animate.executor": "Run",
+    "Python.python main.py --method monte_carlo --map_size 8 --epsilon 0.15 --gamma 0.9 --episodes 3000 --epsilon_decay 0.97 --epsilon_min 0.02 --use_dynamic_epsilon --map_type custom --custom_holes \"5,10,15,20\" --use_exploration_bonus --exploration_bonus_value -0.02.executor": "Run",
+    "Python.test.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\inkchess\Desktop\Assignment1\Assignment1" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.python main.py --method monte_carlo --map_size 8 --epsilon 0.15 --gamma 0.9 --episodes 3000 --epsilon_decay 0.97 --epsilon_min 0.02 --use_dynamic_epsilon --map_type custom --custom_holes &quot;5,10,15,20&quot; --use_exploration_bonus --exploration_bonus_value -0.02">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="Assignment1" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="python Tewst.py --method monte_carlo --map_size 10 --epsilon 0.1 --gamma 0.9 --episodes 2000 --epsilon_decay 0.98 --epsilon_min 0.05 --use_dynamic_epsilon --map_type custom --custom_holes &quot;15,22,35,48&quot; --use_exploration_bonus" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Assignment1" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="Tewst.py" />
+      <option name="PARAMETERS" value="--method monte_carlo --map_size 10 --epsilon 0.1 --gamma 0.9 --episodes 2000 --epsilon_decay 0.98 --epsilon_min 0.05 --use_dynamic_epsilon --map_type custom --custom_holes 15,22,35,48 --use_exploration_bonus" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="python Tewst.py --method monte_carlo --map_size 4 --epsilon 0.1 --gamma 0.9 --episodes 5000 --epsilon_decay 0.98 --epsilon_min 0.05 --use_dynamic_epsilon --map_type custom --custom_holes &quot;5,7,11,12&quot; --use_exploration_bonus" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Assignment1" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="Tewst.py" />
+      <option name="PARAMETERS" value="--method monte_carlo --map_size 4 --epsilon 0.1 --gamma 0.9 --episodes 5000 --epsilon_decay 0.98 --epsilon_min 0.05 --use_dynamic_epsilon --map_type custom --custom_holes 5,7,11,12 --use_exploration_bonus" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="python Tewst.py --method monte_carlo --map_size 4 --epsilon 0.1 --gamma 0.9 --episodes 5000 --map_type custom --custom_holes &quot;5,7,11,12&quot;" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Assignment1" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="Tewst.py" />
+      <option name="PARAMETERS" value="--method monte_carlo --map_size 4 --epsilon 0.1 --gamma 0.9 --episodes 5000 --map_type custom --custom_holes 5,7,11,12" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="python Tewst.py --method sarsa --map_size 6 --epsilon 0.1 --gamma 0.9 --episodes 5000 --epsilon_decay 0.98 --epsilon_min 0.05 --use_dynamic_epsilon --map_type random --use_exploration_bonus --exploration_bonus_value -0.005" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Assignment1" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="Tewst.py" />
+      <option name="PARAMETERS" value="--method sarsa --map_size 6 --epsilon 0.1 --gamma 0.9 --episodes 5000 --epsilon_decay 0.98 --epsilon_min 0.05 --use_dynamic_epsilon --map_type random --use_exploration_bonus --exploration_bonus_value -0.005" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="python main.py --method monte_carlo --map_size 8 --epsilon 0.15 --gamma 0.9 --episodes 3000 --epsilon_decay 0.97 --epsilon_min 0.02 --use_dynamic_epsilon --map_type custom --custom_holes &quot;5,10,15,20&quot; --use_exploration_bonus --exploration_bonus_value -0.02" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Assignment1" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="main.py" />
+      <option name="PARAMETERS" value="--method monte_carlo --map_size 8 --epsilon 0.15 --gamma 0.9 --episodes 3000 --epsilon_decay 0.97 --epsilon_min 0.02 --use_dynamic_epsilon --map_type custom --custom_holes 5,10,15,20 --use_exploration_bonus --exploration_bonus_value -0.02" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.python main.py --method monte_carlo --map_size 8 --epsilon 0.15 --gamma 0.9 --episodes 3000 --epsilon_decay 0.97 --epsilon_min 0.02 --use_dynamic_epsilon --map_type custom --custom_holes &quot;5,10,15,20&quot; --use_exploration_bonus --exploration_bonus_value -0.02" />
+        <item itemvalue="Python.python Tewst.py --method sarsa --map_size 6 --epsilon 0.1 --gamma 0.9 --episodes 5000 --epsilon_decay 0.98 --epsilon_min 0.05 --use_dynamic_epsilon --map_type random --use_exploration_bonus --exploration_bonus_value -0.005" />
+        <item itemvalue="Python.python Tewst.py --method monte_carlo --map_size 4 --epsilon 0.1 --gamma 0.9 --episodes 5000 --epsilon_decay 0.98 --epsilon_min 0.05 --use_dynamic_epsilon --map_type custom --custom_holes &quot;5,7,11,12&quot; --use_exploration_bonus" />
+        <item itemvalue="Python.python Tewst.py --method monte_carlo --map_size 4 --epsilon 0.1 --gamma 0.9 --episodes 5000 --epsilon_decay 0.98 --epsilon_min 0.05 --use_dynamic_epsilon --map_type custom --custom_holes &quot;5,7,11,12&quot; --use_exploration_bonus" />
+        <item itemvalue="Python.python Tewst.py --method monte_carlo --map_size 4 --epsilon 0.1 --gamma 0.9 --episodes 5000 --map_type custom --custom_holes &quot;5,7,11,12&quot;" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-babbdf50b680-746f403e7f0c-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.15989.155" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="81d1fd37-3e75-4605-af9f-fd157c2b2570" name="更改" comment="" />
+      <created>1740629024190</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1740629024190</updated>
+    </task>
+    <servers />
+  </component>
+</project>

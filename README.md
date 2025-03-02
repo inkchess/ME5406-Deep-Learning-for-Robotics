@@ -114,11 +114,23 @@ The environment supports two map generation modes:
 
 ## 3. Command-Line Examples for Basic Implementation
 
-For the basic implementation, dynamic epsilon and exploration bonus are NOT used. The map is 4×4, and the parameters include a custom set of obstacles.
+For the basic implementation. The map is 4×4, and the parameters include a custom set of obstacles.
 
 Example (using custom holes "5,10,15,20", epsilon 0.1, gamma 0.9):
+
+**Method Sarsa**
 ```bash
-python main.py --method sarsa --map_size 4 --epsilon 0.1 --gamma 0.9 --episodes 5000 --map_type custom --custom_holes "5,10,15,20"
+python main.py --method sarsa --map_size 4 --epsilon 0.1 --gamma 0.9 --episodes 5000 --map_type custom --custom_holes "5,7,11,12"
+```
+
+**Method Monte_carlo**
+```bash
+python main.py --method monte_carlo --map_size 4 --epsilon 0.1 --gamma 0.9 --episodes 5000 --map_type custom --custom_holes "5,7,11,12"
+```
+
+**Method Q_learning**
+```bash
+python main.py --method q_learning --map_size 4 --epsilon 0.1 --gamma 0.9 --episodes 5000 --map_type custom --custom_holes "5,7,11,12"
 ```
 *Explanation:*  
 - **--method sarsa**: Uses the SARSA algorithm.
@@ -126,8 +138,6 @@ python main.py --method sarsa --map_size 4 --epsilon 0.1 --gamma 0.9 --episodes 
 - **--epsilon 0.1**, **--gamma 0.9**: Sets the initial epsilon and discount factor.
 - **--episodes 5000**: Runs 5000 episodes.
 - **--map_type custom** and **--custom_holes "5,10,15,20"**: Specifies a custom map with obstacles at states 5, 10, 15, and 20.
-  
-(Note: In this basic implementation, dynamic epsilon and exploration bonus options are off by default.)
 
 ---
 
@@ -189,249 +199,19 @@ The program generates a figure composed of six subplots:
 
 ---
 
-## Additional Details
+## Testing Results
 
-- **Modularity:**  
-  The project is organized into several Python files for better maintainability and modularity.
-  
-- **Output:**  
-  The program prints the environment layout, episode statistics, and saves a figure (with a wrapped title) to the `./figure-result` directory. The filename is automatically generated from the experiment title (illegal filename characters are removed).
-
-- **Assumptions:**  
-  All algorithms use tabular methods (no neural networks). The parameters such as learning rate (alpha), discount factor (gamma), epsilon settings, etc., are set via command-line arguments.
-
----
-
-## Command-Line Examples Summary (Without Advanced Features)
-
-For a basic run (without dynamic epsilon and exploration bonus) on a 4×4 grid using custom obstacles:
-```bash
-python main.py --method sarsa --map_size 4 --epsilon 0.1 --gamma 0.9 --episodes 5000 --map_type custom --custom_holes "5,10,15,20"
-```
-
-For an advanced run (with dynamic epsilon and exploration bonus) on a 10×10 grid:
-```bash
-python main.py --method q_learning --map_size 10 --epsilon 0.2 --gamma 0.95 --episodes 2000 --epsilon_decay 0.99 --epsilon_min 0.01 --use_dynamic_epsilon --map_type custom --custom_holes "15,22,35,48" --use_exploration_bonus --exploration_bonus_value -0.01
-```
+- **Map_Size 4×4:**  
+    ![Map_Size 4×4 SARSA](figure-result/general/Reinforcement_Learning_SARSA__Map_Size_4__Epsilon_0.1__Gamma_0.9__Episodes_5000__Dynamic_Epsilon_No__Exploration_Bonus_No__Map_Type_Custom.png) 
+    ![Map_Size 4×4 Q_LEARNING](figure-result/general/Reinforcement_Learning_Q_LEARNING__Map_Size_4__Epsilon_0.1__Gamma_0.9__Episodes_5000__Dynamic_Epsilon_No__Exploration_Bonus_No__Map_Type_Custom.png) 
+    ![Map_Size 4×4 MONTE_CARLO](figure-result/general/Reinforcement_Learning_MONTE_CARLO__Map_Size_4__Epsilon_0.1__Gamma_0.9__Episodes_5000__Dynamic_Epsilon_No__Exploration_Bonus_No__Map_Type_Custom.png)
+  - **Map_Size 10×10:**  
+    ![Map_Size 10×10 SARSA](figure-result/general/Reinforcement_Learning_SARSA__Map_Size_10__Epsilon_0.5__Gamma_0.98__Episodes_50000__Dynamic_Epsilon_No__Exploration_Bonus_No__Map_Type_Random.png) 
+    ![Map_Size 10×10 Q_LEARNING](figure-result/general/Reinforcement_Learning_Q_LEARNING__Map_Size_10__Epsilon_0.5__Gamma_0.98__Episodes_50000__Dynamic_Epsilon_No__Exploration_Bonus_No__Map_Type_Random.png) 
+    ![Map_Size 10×10 MONTE_CARLO](figure-result/general/Reinforcement_Learning_MONTE_CARLO__Map_Size_10__Epsilon_0.5__Gamma_0.98__Episodes_50000__Dynamic_Epsilon_No__Exploration_Bonus_No__Map_Type_Random.png)
 
 ---
 
 ## License
 
 This project is provided for educational purposes only.
-
----
-
-# 中文翻译
-
-## II. 问题陈述
-
-考虑一个冰冻湖，其上覆盖着（四个）由非常薄冰面覆盖的冰洞。假设一个机器人需要在冰冻表面上滑行，从一个位置（即左上角）到另一个位置（右下角），以便在那里拾取一个飞盘，如图 1 所示。
-
-机器人的操作具有以下特点：
-1. 在某一状态下，机器人可以向左、向右、向上或向下移动。
-2. 机器人被限制在网格内移动。
-3. 如果机器人到达飞盘位置，获得 +1 奖励；如果掉进冰洞，则获得 -1 奖励；其他情况下奖励为 0。
-4. 当机器人到达飞盘或掉进冰洞时，一个回合结束。
-
-## III. 要求
-
-### A. 任务说明
-
-本项目共需完成以下三个任务，各任务的分值比例如下：
-
-**任务 1：基础实现 (25%)**
-
-编写一个 Python 程序，使用以下三种表格（即不涉及神经网络）强化学习技术，为上述冰冻湖问题（参见问题陈述）计算出最优策略：
-1. 无探索起始的首访蒙特卡罗控制。
-2. 使用 epsilon-greedy 行为策略的 SARSA 算法。
-3. 使用 epsilon-greedy 行为策略的 Q-learning 算法。你可以选择所有必要参数（例如折扣率、学习率等）的值。
-
-**任务 2：扩展实现 (25%)**
-
-将网格尺寸增大到至少 10×10，同时保持冰洞数目与状态数之间的比例（例如 4/16 = 25%）。随机分布冰洞，但不要完全阻挡通往飞盘的通道。然后重复任务 1。
-
----
-
-## 项目介绍
-
-本项目旨在使用三种经典的强化学习算法解决冰冻湖问题。环境被建模为一个网格，其中机器人（智能体）需要从左上角滑行到右下角，避免冰洞并最终达到目标以拾取飞盘。奖励结构如下：
-- 到达目标（飞盘）：+1
-- 掉进冰洞：-1
-- 其他状态：0（若启用了探索奖励，则会有一个较小的负奖励）
-
-项目采用模块化设计，共包含多个 Python 文件：
-- **env.py**：定义冰冻湖环境类。
-- **utils.py**：提供辅助函数（如 epsilon-greedy 策略、Q 表初始化、策略打印、绘图工具等）。
-- **monte_carlo.py**：实现首访蒙特卡罗控制算法。
-- **sarsa.py**：实现 SARSA 算法。
-- **q_learning.py**：实现 Q-learning 算法。
-- **main.py**：主程序，用于解析命令行参数、设置环境和算法、运行训练、绘图并保存图像。
-
----
-
-## 1. 算法原理及伪代码图
-
-### 1.1. 首访蒙特卡罗控制
-**原理：**  
-该方法通过 epsilon-greedy 策略生成完整回合，并对回合中第一次访问的状态-动作对计算累计回报，再更新 Q 表。
-
-**伪代码：**
-```
-Initialize Q(s, a) arbitrarily.
-For each episode:
-    Generate an episode: s0, a0, r1, s1, a1, r2, ..., s_T.
-    For each (s, a) in the episode (first visit only):
-         G = sum_{t=k}^{T} (gamma^(t-k)) * r_{t+1}
-         Update Q(s, a) as the average of returns.
-```
-
-### 1.2. SARSA (在策略)
-**原理：**  
-SARSA 使用当前策略选取动作，并依据当前状态、动作及下一个状态-动作对来更新 Q 值。
-
-**伪代码：**
-```
-Initialize Q(s, a) arbitrarily.
-For each episode:
-    Initialize s, choose a using epsilon-greedy.
-    For each step:
-         Take action a, observe r and s'.
-         Choose a' using epsilon-greedy from Q(s', ·).
-         Update Q(s, a) = Q(s, a) + alpha * [r + gamma * Q(s', a') - Q(s, a)]
-         s <- s', a <- a'
-         If s' is terminal, break.
-```
-
-### 1.3. Q-learning (离策略)
-**原理：**  
-Q-learning 采用下一状态的最大 Q 值（与当前策略无关）来更新当前状态-动作的 Q 值。
-
-**伪代码：**
-```
-Initialize Q(s, a) arbitrarily.
-For each episode:
-    Initialize s.
-    For each step:
-         Choose action a using epsilon-greedy.
-         Take action a, observe r and s'.
-         Update Q(s, a) = Q(s, a) + alpha * [r + gamma * max_{a'} Q(s', a') - Q(s, a)]
-         s <- s'
-         If s' is terminal, break.
-```
-
----
-
-## 2. 地图生成原理
-
-本环境支持两种地图生成模式：
-- **随机地图模式：**  
-  根据固定比例（例如 25%）随机生成冰洞，并确保至少存在一条从起点到目标的有效路径。
-- **自设地图模式：**  
-  用户可以通过命令行参数 `--custom_holes` 指定障碍状态编号（例如 "5,7,11,12"），此时使用自定义障碍。
-
----
-
-## 3. 命令行示例（基础实现）
-
-在基础实现中，不启用动态 epsilon 以及探索奖励。地图尺寸为 4×4，参数示例：
-```bash
-python main.py --method sarsa --map_size 4 --epsilon 0.1 --gamma 0.9 --episodes 5000 --map_type custom --custom_holes "5,10,15,20"
-```
-*说明：*  
-- 使用 SARSA 算法；  
-- 地图为 4×4 自设地图，障碍位于状态 5, 10, 15, 20；  
-- 初始 epsilon 为 0.1，gamma 为 0.9，训练 5000 个回合。
-
----
-
-## 4. 改进算法说明（高级实现）
-
-在改进算法中，我们引入以下新功能：
-- **动态 Epsilon-greedy 策略：**  
-  Epsilon 随着训练回合数逐渐衰减，其计算公式为：  
-  ```
-  current_epsilon = max(epsilon_min, epsilon * (epsilon_decay^episode))
-  ```
-- **探索奖励：**  
-  在非终点状态下，为鼓励智能体尽快结束回合，给予一个小的负奖励（例如 -0.01）。此功能由命令行参数 `--use_exploration_bonus` 和 `--exploration_bonus_value` 控制。
-
-### 高级命令行参数说明
-- `--method`: RL algorithm to use (`sarsa`, `monte_carlo`, `q_learning`).
-- `--map_size`: Grid size (e.g., 4, 6, 10).
-- `--epsilon`: Initial epsilon value.
-- `--gamma`: Discount factor.
-- `--episodes`: Number of training episodes.
-- `--epsilon_decay`: Epsilon decay rate per episode.
-- `--epsilon_min`: Minimum epsilon value.
-- `--use_dynamic_epsilon`: If provided, epsilon decays over episodes.
-- `--map_type`: Map type; "random" for random map or "custom" for a user-defined map.
-- `--custom_holes`: For a custom map, specify obstacle state numbers separated by commas (e.g., "5,7,11,12").
-- `--use_exploration_bonus`: If provided, enables an exploration bonus in non-terminal states.
-- `--exploration_bonus_value`: The bonus value in non-terminal states (e.g., -0.01).
-
-### Advanced Command-Line Example
-```bash
-python main.py --method q_learning --map_size 10 --epsilon 0.2 --gamma 0.95 --episodes 2000 --epsilon_decay 0.99 --epsilon_min 0.01 --use_dynamic_epsilon --map_type custom --custom_holes "15,22,35,48" --use_exploration_bonus --exploration_bonus_value -0.01
-```
-*说明：*  
-在 10×10 自设地图上运行 Q-learning，其中障碍为状态 15, 22, 35, 48。使用动态 epsilon（初始 0.2，衰减至最小值 0.01）和探索奖励（非终点状态奖励 -0.01）。
-
----
-
-## 5. Detailed Description of the Figures
-
-The program generates a figure containing six subplots:
-
-1. **Number of Steps per Episode:**  
-   Plots the number of steps taken in each episode. It shows the learning progress in terms of episode length.
-
-2. **Success vs. Failure Counts:**  
-   A bar chart that shows the number of successful episodes (reaching the frisbee) versus failed episodes (falling into a hole).
-
-3. **Reward per Episode (with Moving Average):**  
-   A scatter plot of raw rewards per episode overlaid with a moving average (e.g., MA(100)). This indicates the trend of rewards as training progresses.
-
-4. **Training Path:**  
-   Displays the grid environment with obstacles, marking the start with "Start" (orange) and the goal with "Goal" (purple). The path taken by the agent is indicated with directional arrows.
-
-5. **Action Value Heatmap:**  
-   For each grid cell, the Q-values for the four actions are visualized. Each cell is divided into four triangles (each corresponding to an action), with colors ranging from blue (low) to red (high). The Q-value is shown in each triangle.
-
-6. **Cumulative Training Time:**  
-   A line plot showing the cumulative training time (in seconds) across episodes, which provides insight into the computational efficiency.
-
----
-
-## Additional Project Details
-
-- **Modular Design:**  
-  The project is split into multiple Python files (env.py, utils.py, monte_carlo.py, sarsa.py, q_learning.py, main.py) for clarity and maintainability.
-
-- **Output:**  
-  The program prints the environment layout and per-episode training statistics to the console. It then displays a figure containing the six subplots described above. The figure is also saved in the `./figure-result` directory, with the filename based on the experiment title (wrapped to 80 characters per line).
-
----
-
-## Command-Line Examples Summary
-
-### Basic Implementation (No dynamic epsilon, no exploration bonus; 4×4 custom map)
-```bash
-python main.py --method sarsa --map_size 4 --epsilon 0.1 --gamma 0.9 --episodes 5000 --map_type custom --custom_holes "5,10,15,20"
-```
-
-### Advanced Implementation (Dynamic epsilon and exploration bonus enabled)
-```bash
-python main.py --method q_learning --map_size 10 --epsilon 0.2 --gamma 0.95 --episodes 2000 --epsilon_decay 0.99 --epsilon_min 0.01 --use_dynamic_epsilon --map_type custom --custom_holes "15,22,35,48" --use_exploration_bonus --exploration_bonus_value -0.01
-```
-
----
-
-## License
-
-This project is provided for educational purposes only.
-```
-
----
-
-This **README.md** file is as detailed as possible, covering the assignment problem statement, requirements, project introduction, algorithm principles with pseudocode, map generation principles, command-line examples for both basic and advanced implementations, and a detailed description of the six figures. The latter half of the document is provided in Chinese as a translation.

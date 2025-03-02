@@ -2,6 +2,7 @@ import numpy as np
 import random
 from collections import deque
 
+
 class FrozenLakeEnv:
     """
     Frozen Lake Environment:
@@ -12,6 +13,7 @@ class FrozenLakeEnv:
     - If explore_bonus_value (non-zero) is set, non-terminal states will yield that bonus (typically a small negative value) to encourage faster episode termination.
     - If custom_holes is provided, it will use the specified obstacles; otherwise, obstacles are randomly generated.
     """
+
     def __init__(self, grid_size=4, hole_ratio=0.25, seed=None, custom_holes=None, explore_bonus_value=0.0):
         self.grid_size = grid_size
         self.n_states = grid_size * grid_size
@@ -81,12 +83,31 @@ class FrozenLakeEnv:
     def step(self, action):
         """
         Update the environment state based on the action.
-        Returns: (new_state, reward, done)
+        Returns: (new_state, reward, done, valid_move)
+         - If the action moves out-of-bound, the move is considered invalid:
+             * The state remains unchanged.
+             * reward is 0.
+             * done is False.
+             * valid_move is False (i.e., this move is not counted in training metrics).
          - If the new state is a hole, reward = -1 and episode ends.
          - If the new state is the goal, reward = +1 and episode ends.
-         - Otherwise, reward = 0; if explore_bonus_value is set (non-zero), then that value is used.
+         - Otherwise, reward = 0; if explore_bonus_value is set, then that value is used.
         """
-        next_state = self._next_state(self.state, action)
+        # Determine current row and col
+        row, col = divmod(self.state, self.grid_size)
+        action_map = {0: (-1, 0), 1: (0, 1), 2: (1, 0), 3: (0, -1)}
+        delta = action_map[action]
+        new_row = row + delta[0]
+        new_col = col + delta[1]
+
+        # Check if move is within boundaries
+        if new_row < 0 or new_row >= self.grid_size or new_col < 0 or new_col >= self.grid_size:
+            # Invalid move: do not count in training metrics
+            return self.state, 0, False, False
+
+        # Compute next state for a valid move
+        next_state = new_row * self.grid_size + new_col
+
         if next_state in self.holes:
             reward = -1
             done = True
@@ -99,7 +120,7 @@ class FrozenLakeEnv:
             if self.explore_bonus_value != 0:
                 reward = self.explore_bonus_value
         self.state = next_state
-        return next_state, reward, done
+        return next_state, reward, done, True
 
     def render(self, policy=None):
         """

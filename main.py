@@ -32,7 +32,7 @@ parser.add_argument("--exploration_bonus_value", type=float, default=-0.01,
                     help="Exploration bonus value in non-terminal states (e.g., -0.01)")
 args = parser.parse_args()
 
-seed = 42
+seed = 37
 random.seed(seed)
 np.random.seed(seed)
 
@@ -125,7 +125,7 @@ wrapped_title = "\n".join(textwrap.wrap(title, width=80))
 plt.suptitle(wrapped_title, fontsize=16)
 plt.tight_layout(rect=[0, 0, 1, 0.95])
 
-save_dir = "./figure-result"
+save_dir = "./figure-result/general"
 if not os.path.exists(save_dir):
     os.makedirs(save_dir)
 filename = title.replace(" ", "_").replace(":", "").replace("|", "") + ".png"

@@ -4,7 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="81d1fd37-3e75-4605-af9f-fd157c2b2570" name="更改" comment="Frozen Lake Reinforcement Learning Solver" />
+    <list default="true" id="81d1fd37-3e75-4605-af9f-fd157c2b2570" name="更改" comment="Frozen Lake Reinforcement Learning Solver">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env.py" beforeDir="false" afterPath="$PROJECT_DIR$/env.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/figure-result/Reinforcement_Learning_MONTE_CARLO__Map_Size_10__Epsilon_0.1__Gamma_0.9__Episodes_2000__Dynamic_Epsilon_Yes__Exploration_Bonus_Yes__Map_Type_Custom.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/figure-result/Reinforcement_Learning_MONTE_CARLO__Map_Size_4__Epsilon_0.1__Gamma_0.9__Episodes_2000__Dynamic_Epsilon_Yes__Exploration_Bonus_Yes__Map_Type_Custom.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/figure-result/Reinforcement_Learning_MONTE_CARLO__Map_Size_4__Epsilon_0.1__Gamma_0.9__Episodes_5000__Dynamic_Epsilon_No__Exploration_Bonus_No__Map_Type_Custom.png" beforeDir="false" afterPath="$PROJECT_DIR$/figure-result/Reinforcement_Learning_MONTE_CARLO__Map_Size_4__Epsilon_0.1__Gamma_0.9__Episodes_5000__Dynamic_Epsilon_No__Exploration_Bonus_No__Map_Type_Custom.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/figure-result/Reinforcement_Learning_MONTE_CARLO__Map_Size_4__Epsilon_0.1__Gamma_0.9__Episodes_5000__Dynamic_Epsilon_No__Exploration_Bonus_No__Map_Type_Random.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/figure-result/Reinforcement_Learning_MONTE_CARLO__Map_Size_4__Epsilon_0.1__Gamma_0.9__Episodes_5000__Dynamic_Epsilon_Yes__Exploration_Bonus_Yes__Map_Type_Custom.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/figure-result/Reinforcement_Learning_SARSA__Map_Size_4__Epsilon_0.1__Gamma_0.9__Episodes_5000__Dynamic_Epsilon_No__Exploration_Bonus_No__Map_Type_Random.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/figure-result/Reinforcement_Learning_SARSA__Map_Size_6__Epsilon_0.1__Gamma_0.9__Episodes_5000__Dynamic_Epsilon_Yes__Exploration_Bonus_Yes__Map_Type_Random.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/monte_carlo.py" beforeDir="false" afterPath="$PROJECT_DIR$/monte_carlo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/q_learning.py" beforeDir="false" afterPath="$PROJECT_DIR$/q_learning.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sarsa.py" beforeDir="false" afterPath="$PROJECT_DIR$/sarsa.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -49,7 +65,11 @@
     "Python.python Tewst.py --method sarsa --map_size 6 --epsilon 0.1 --gamma 0.9 --episodes 5000 --epsilon_decay 0.98 --epsilon_min 0.05 --use_dynamic_epsilon --map_type random --use_exploration_bonus --exploration_bonus_value -0.005.executor": "Run",
     "Python.python Tewst.py --q_learning --map_size 10 --epsilon 0.1 --gamma 0.9 --episodes 5000.executor": "Run",
     "Python.python frozenlake_animate.py --method q_learning --map_size 4 --epsilon 0.1 --gamma 0.9 --episodes 20 --animate.executor": "Run",
+    "Python.python main.py --method monte_carlo --map_size 4 --epsilon 0.1 --gamma 0.9 --episodes 5000 --map_type custom --custom_holes \"5,7,11,12\".executor": "Run",
     "Python.python main.py --method monte_carlo --map_size 8 --epsilon 0.15 --gamma 0.9 --episodes 3000 --epsilon_decay 0.97 --epsilon_min 0.02 --use_dynamic_epsilon --map_type custom --custom_holes \"5,10,15,20\" --use_exploration_bonus --exploration_bonus_value -0.02.executor": "Run",
+    "Python.python main.py --method q_learning --map_size 4 --epsilon 0.1 --gamma 0.9 --episodes 5000 --map_type custom --custom_holes \"5,7,11,12\".executor": "Run",
+    "Python.python main.py --method sarsa --map_size 4 --epsilon 0.1 --gamma 0.9 --episodes 5000 --map_type custom --custom_holes \"5,10,15,20\".executor": "Run",
+    "Python.python main.py --method sarsa --map_size 4 --epsilon 0.1 --gamma 0.9 --episodes 5000 --map_type custom --custom_holes \"5,7,11,12\".executor": "Run",
     "Python.test.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
@@ -61,7 +81,7 @@
       <recent name="C:\Users\inkchess\Desktop\Assignment1\Assignment1" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.python main.py --method monte_carlo --map_size 8 --epsilon 0.15 --gamma 0.9 --episodes 3000 --epsilon_decay 0.97 --epsilon_min 0.02 --use_dynamic_epsilon --map_type custom --custom_holes &quot;5,10,15,20&quot; --use_exploration_bonus --exploration_bonus_value -0.02">
+  <component name="RunManager" selected="Python.python main.py --method sarsa --map_size 4 --epsilon 0.1 --gamma 0.9 --episodes 5000 --map_type custom --custom_holes &quot;5,7,11,12&quot;">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="Assignment1" />
       <option name="ENV_FILES" value="" />
@@ -84,7 +104,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="python Tewst.py --method monte_carlo --map_size 10 --epsilon 0.1 --gamma 0.9 --episodes 2000 --epsilon_decay 0.98 --epsilon_min 0.05 --use_dynamic_epsilon --map_type custom --custom_holes &quot;15,22,35,48&quot; --use_exploration_bonus" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="python main.py --method monte_carlo --map_size 4 --epsilon 0.1 --gamma 0.9 --episodes 5000 --map_type custom --custom_holes &quot;5,7,11,12&quot;" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Assignment1" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -97,74 +117,8 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="Tewst.py" />
-      <option name="PARAMETERS" value="--method monte_carlo --map_size 10 --epsilon 0.1 --gamma 0.9 --episodes 2000 --epsilon_decay 0.98 --epsilon_min 0.05 --use_dynamic_epsilon --map_type custom --custom_holes 15,22,35,48 --use_exploration_bonus" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="python Tewst.py --method monte_carlo --map_size 4 --epsilon 0.1 --gamma 0.9 --episodes 5000 --epsilon_decay 0.98 --epsilon_min 0.05 --use_dynamic_epsilon --map_type custom --custom_holes &quot;5,7,11,12&quot; --use_exploration_bonus" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Assignment1" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="Tewst.py" />
-      <option name="PARAMETERS" value="--method monte_carlo --map_size 4 --epsilon 0.1 --gamma 0.9 --episodes 5000 --epsilon_decay 0.98 --epsilon_min 0.05 --use_dynamic_epsilon --map_type custom --custom_holes 5,7,11,12 --use_exploration_bonus" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="python Tewst.py --method monte_carlo --map_size 4 --epsilon 0.1 --gamma 0.9 --episodes 5000 --map_type custom --custom_holes &quot;5,7,11,12&quot;" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Assignment1" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="Tewst.py" />
+      <option name="SCRIPT_NAME" value="main.py" />
       <option name="PARAMETERS" value="--method monte_carlo --map_size 4 --epsilon 0.1 --gamma 0.9 --episodes 5000 --map_type custom --custom_holes 5,7,11,12" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="python Tewst.py --method sarsa --map_size 6 --epsilon 0.1 --gamma 0.9 --episodes 5000 --epsilon_decay 0.98 --epsilon_min 0.05 --use_dynamic_epsilon --map_type random --use_exploration_bonus --exploration_bonus_value -0.005" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Assignment1" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="Tewst.py" />
-      <option name="PARAMETERS" value="--method sarsa --map_size 6 --epsilon 0.1 --gamma 0.9 --episodes 5000 --epsilon_decay 0.98 --epsilon_min 0.05 --use_dynamic_epsilon --map_type random --use_exploration_bonus --exploration_bonus_value -0.005" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -194,13 +148,79 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="python main.py --method q_learning --map_size 4 --epsilon 0.1 --gamma 0.9 --episodes 5000 --map_type custom --custom_holes &quot;5,7,11,12&quot;" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Assignment1" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="main.py" />
+      <option name="PARAMETERS" value="--method q_learning --map_size 4 --epsilon 0.1 --gamma 0.9 --episodes 5000 --map_type custom --custom_holes 5,7,11,12" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="python main.py --method sarsa --map_size 4 --epsilon 0.1 --gamma 0.9 --episodes 5000 --map_type custom --custom_holes &quot;5,10,15,20&quot;" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Assignment1" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="main.py" />
+      <option name="PARAMETERS" value="--method sarsa --map_size 4 --epsilon 0.1 --gamma 0.9 --episodes 5000 --map_type custom --custom_holes 5,10,15,20" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="python main.py --method sarsa --map_size 4 --epsilon 0.1 --gamma 0.9 --episodes 5000 --map_type custom --custom_holes &quot;5,7,11,12&quot;" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Assignment1" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="main.py" />
+      <option name="PARAMETERS" value="--method sarsa --map_size 4 --epsilon 0.1 --gamma 0.9 --episodes 5000 --map_type custom --custom_holes 5,7,11,12" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.python main.py --method monte_carlo --map_size 8 --epsilon 0.15 --gamma 0.9 --episodes 3000 --epsilon_decay 0.97 --epsilon_min 0.02 --use_dynamic_epsilon --map_type custom --custom_holes &quot;5,10,15,20&quot; --use_exploration_bonus --exploration_bonus_value -0.02" />
-        <item itemvalue="Python.python Tewst.py --method sarsa --map_size 6 --epsilon 0.1 --gamma 0.9 --episodes 5000 --epsilon_decay 0.98 --epsilon_min 0.05 --use_dynamic_epsilon --map_type random --use_exploration_bonus --exploration_bonus_value -0.005" />
-        <item itemvalue="Python.python Tewst.py --method monte_carlo --map_size 4 --epsilon 0.1 --gamma 0.9 --episodes 5000 --epsilon_decay 0.98 --epsilon_min 0.05 --use_dynamic_epsilon --map_type custom --custom_holes &quot;5,7,11,12&quot; --use_exploration_bonus" />
-        <item itemvalue="Python.python Tewst.py --method monte_carlo --map_size 4 --epsilon 0.1 --gamma 0.9 --episodes 5000 --epsilon_decay 0.98 --epsilon_min 0.05 --use_dynamic_epsilon --map_type custom --custom_holes &quot;5,7,11,12&quot; --use_exploration_bonus" />
-        <item itemvalue="Python.python Tewst.py --method monte_carlo --map_size 4 --epsilon 0.1 --gamma 0.9 --episodes 5000 --map_type custom --custom_holes &quot;5,7,11,12&quot;" />
+        <item itemvalue="Python.python main.py --method sarsa --map_size 4 --epsilon 0.1 --gamma 0.9 --episodes 5000 --map_type custom --custom_holes &quot;5,7,11,12&quot;" />
+        <item itemvalue="Python.python main.py --method sarsa --map_size 4 --epsilon 0.1 --gamma 0.9 --episodes 5000 --map_type custom --custom_holes &quot;5,7,11,12&quot;" />
+        <item itemvalue="Python.python main.py --method q_learning --map_size 4 --epsilon 0.1 --gamma 0.9 --episodes 5000 --map_type custom --custom_holes &quot;5,7,11,12&quot;" />
+        <item itemvalue="Python.python main.py --method monte_carlo --map_size 4 --epsilon 0.1 --gamma 0.9 --episodes 5000 --map_type custom --custom_holes &quot;5,7,11,12&quot;" />
+        <item itemvalue="Python.python main.py --method sarsa --map_size 4 --epsilon 0.1 --gamma 0.9 --episodes 5000 --map_type custom --custom_holes &quot;5,7,11,12&quot;" />
       </list>
     </recent_temporary>
   </component>

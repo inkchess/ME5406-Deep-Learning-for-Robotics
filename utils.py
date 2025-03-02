@@ -6,7 +6,6 @@ from matplotlib.patches import Polygon
 from matplotlib.cm import ScalarMappable
 from matplotlib.colors import Normalize, LinearSegmentedColormap
 
-
 def epsilon_greedy_action(Q, state, current_epsilon, n_actions=4):
     """
     Choose an action from state using an epsilon-greedy policy.
@@ -22,7 +21,6 @@ def epsilon_greedy_action(Q, state, current_epsilon, n_actions=4):
         actions = [a for a, q in Q[state].items() if q == max_q]
         return random.choice(actions)
 
-
 def initialize_Q(env):
     """
     Initialize the Q table: for every state (0 to n_states-1) and action (0,1,2,3), set Q value to 0.
@@ -30,7 +28,6 @@ def initialize_Q(env):
     from collections import defaultdict
     Q = defaultdict(lambda: {a: 0.0 for a in range(4)})
     return Q
-
 
 def extract_policy(Q, env):
     """
@@ -46,7 +43,6 @@ def extract_policy(Q, env):
             best_action = max(Q[s], key=Q[s].get)
             policy[s] = best_action
     return policy
-
 
 def print_policy_grid(policy, env):
     """
@@ -71,7 +67,6 @@ def print_policy_grid(policy, env):
         print(' '.join(row))
     print()
 
-
 def plot_reward_with_moving_average(reward_list, window_size=100):
     """
     Plot the raw reward and its moving average (MA(window_size)).
@@ -85,7 +80,6 @@ def plot_reward_with_moving_average(reward_list, window_size=100):
         means = torch.cat((torch.zeros(window_size - 1), means))
         plt.plot(x, means.numpy(), color='red', label=f'MA({window_size})')
     plt.legend()
-
 
 def get_training_path(policy, env, max_steps=50):
     """
@@ -108,7 +102,6 @@ def get_training_path(policy, env, max_steps=50):
         visited.add(next_state)
         state = next_state
     return path
-
 
 def draw_path_on_map(ax, env, path):
     """
@@ -142,7 +135,6 @@ def draw_path_on_map(ax, env, path):
     ax.set_xlim(0, grid_size)
     ax.set_ylim(0, grid_size)
     ax.set_title("Training Path")
-
 
 def plot_heatmap(Q, env, ax):
     """

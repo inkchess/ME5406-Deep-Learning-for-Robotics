@@ -125,7 +125,7 @@ wrapped_title = "\n".join(textwrap.wrap(title, width=80))
 plt.suptitle(wrapped_title, fontsize=16)
 plt.tight_layout(rect=[0, 0, 1, 0.95])
 
-save_dir = "./figure-result/general"
+save_dir = "./figure-result/dynamic_epsilon and exploration_bonus"
 if not os.path.exists(save_dir):
     os.makedirs(save_dir)
 filename = title.replace(" ", "_").replace(":", "").replace("|", "") + ".png"

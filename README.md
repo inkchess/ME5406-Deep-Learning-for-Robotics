@@ -218,3 +218,9 @@ The program generates a figure composed of six subplots:
 ## License
 
 This project is provided for educational purposes only.
+
+---
+
+## ⭐ Don't Be Stingy with Stars!⭐
+
+If you find this project useful or interesting, please consider giving it a star on GitHub. Your support is greatly appreciated and motivates me to continue improving the project!
